@@ -11,65 +11,23 @@ public class AgeComparator {
         int middle = -1;
         int max = -1;
 
-        int x=Math.min(vasyaAge,katyaAge);
-        int y=Math.max(vasyaAge,katyaAge);
+        min = Math.min(Math.min(vasyaAge, katyaAge), mishaAge);
+        max = Math.max(Math.max(vasyaAge, katyaAge), mishaAge);
 
-        if (mishaAge>=x && mishaAge<=y){
-            middle=mishaAge;
-        } else if (mishaAge<=x){
-            min=mishaAge;
-        } else {
-            max=mishaAge;
-        }
-
-        if (vasyaAge>=min && vasyaAge<=max){
+        if (vasyaAge <= katyaAge && katyaAge <= mishaAge)
+            middle = katyaAge;
+        else if (vasyaAge >= katyaAge && vasyaAge <= mishaAge) {
             middle=vasyaAge;
-        } else if (vasyaAge<=min){
-            min=vasyaAge;
         } else {
-            max=vasyaAge;
+            middle=Math.max(vasyaAge,mishaAge);
         }
-
-        if (katyaAge<=max){
-            middle=katyaAge;
-        } else {
-            max=katyaAge;
-        }
-
-
-
 
 
         System.out.println(vasyaAge);
         System.out.println(katyaAge);
         System.out.println(mishaAge);
 
-//        if (katyaAge <= vasyaAge && katyaAge <= mishaAge) {
-//            min = katyaAge;
-//        }
 //
-//        if (vasyaAge <= katyaAge && vasyaAge <= mishaAge) {
-//            min = vasyaAge;
-//        }
-//
-//        if (mishaAge <= vasyaAge && mishaAge <= katyaAge) {
-//            min = mishaAge;
-//        }
-//
-//        if ((mishaAge <= vasyaAge && mishaAge >= katyaAge) ||
-//                (mishaAge >= vasyaAge && mishaAge <= katyaAge)) {
-//            middle = mishaAge;
-//        }
-//
-//        middle = katyaAge;
-//
-//        if (mishaAge >= katyaAge && mishaAge >= vasyaAge) {
-//            max = mishaAge;
-//        }
-//
-//        if (vasyaAge > mishaAge && vasyaAge > katyaAge) {
-//            max = vasyaAge;
-//        }
 
         System.out.println("Min age: " + min);
         System.out.println("Middle age: " + middle);
