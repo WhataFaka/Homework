@@ -24,16 +24,14 @@ public class AgeComparator {
 
         if (vasyaAge>=min && vasyaAge<=max){
             middle=vasyaAge;
-        } else if (vasyaAge<=min && vasyaAge<=x){
+        } else if (vasyaAge<=min){
             min=vasyaAge;
         } else {
             max=vasyaAge;
         }
 
-        if (katyaAge>=min && katyaAge<=max){
+        if (katyaAge<=max){
             middle=katyaAge;
-        } else if (katyaAge<=min && katyaAge<=x){
-            min=katyaAge;
         } else {
             max=katyaAge;
         }
