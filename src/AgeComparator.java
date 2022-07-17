@@ -1,8 +1,8 @@
 public class AgeComparator {
     public static void main(String[] args) {
-        int vasyaAge = 2;
-        int katyaAge = 35;
-        int mishaAge = 58;
+        int vasyaAge = 88;
+        int katyaAge = 57;
+        int mishaAge = 5;
 
         int min = -1;
         int middle = -1;
@@ -20,20 +20,12 @@ public class AgeComparator {
             min = mishaAge;
         }
 
-        if ((vasyaAge <= mishaAge && vasyaAge >= katyaAge) ||
-                (vasyaAge >= mishaAge && vasyaAge <= katyaAge)) {
-            middle = vasyaAge;
-        }
-
         if ((mishaAge <= vasyaAge && mishaAge >= katyaAge) ||
                 (mishaAge >= vasyaAge && mishaAge <= katyaAge)) {
             middle = mishaAge;
         }
 
-        if ((katyaAge <= vasyaAge && katyaAge >= mishaAge) ||
-                (katyaAge >= vasyaAge && katyaAge <= mishaAge)) {
-            middle = katyaAge;
-        }
+        middle = katyaAge;
 
         if (mishaAge >= katyaAge && mishaAge >= vasyaAge) {
             max = mishaAge;
@@ -43,11 +35,8 @@ public class AgeComparator {
             max = vasyaAge;
         }
 
-        if (katyaAge > mishaAge && katyaAge > vasyaAge) {
-            max = katyaAge;
-        }
-        System.out.println("Min age: "+min);
-        System.out.println("Middle age: "+middle);
-        System.out.println("Max age: "+max);
+        System.out.println("Min age: " + min);
+        System.out.println("Middle age: " + middle);
+        System.out.println("Max age: " + max);
     }
 }

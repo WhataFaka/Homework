@@ -1,12 +1,21 @@
+import java.util.Random;
 
 public class Homework {
     public static void main(String[] args) {
-        int milkAmount = 200; // ml
-        int powderAmount = 5; // g
-        int eggsCount = 3; // items
-        int sugarAmount = 5; // g
-        int oilAmount = 30; // ml
-        int appleCount = 8; // items
+        Random random = new Random();
+        int milkAmount = random.nextInt(1000); // ml
+        int powderAmount = random.nextInt(30); // g
+        int eggsCount = random.nextInt(10); // items
+        int sugarAmount = random.nextInt(500); // g
+        int oilAmount = random.nextInt(50); // ml
+        int appleCount = random.nextInt(10); // items
+
+        System.out.println(milkAmount);
+        System.out.println(powderAmount);
+        System.out.println(eggsCount);
+        System.out.println(sugarAmount);
+        System.out.println(oilAmount);
+        System.out.println(appleCount);
 
         // Example
         // apples - 5
