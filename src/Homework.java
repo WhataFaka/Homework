@@ -1,5 +1,5 @@
 
-public class Main {
+public class Homework {
     public static void main(String[] args) {
         int milkAmount = 200; // ml
         int powderAmount = 5; // g
