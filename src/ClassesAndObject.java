@@ -3,28 +3,44 @@ public class ClassesAndObject {
         Person person1 = new Person();
         Person person2 = new Person();
 
-        person1.name = "Ivan";
         person1.setName("Alena");
-        person1.setAge(29);
-        int year1 = person1.calculateYearsToRetirment();
-        person2.name = "Nik";
+        person1.setAge(-5);
+        System.out.println("Выводим значение в main методе: " + person1.getName());
+        System.out.println("Выводим значение в main методе: " + person1.getAge());
+        person2.setName("Nikita");
         person2.setAge(47);
-        int year2 = person2.calculateYearsToRetirment();
         person1.speak();
         person2.speak();
     }
 }
 
 class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public void setName(String name) {
-        this.name = name;
+        if (name.isEmpty()) {
+            System.out.println("Ты ввёл пустое имя");
+        } else {
+            this.name = name;
+        }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Ты ввёл возраст меньше 0");
+        }
+
+    }
+
+    public int getAge() {
+        return age;
     }
 
     int calculateYearsToRetirment() {
