@@ -17,4 +17,8 @@ public class Arrays {
             System.out.println(numbers1[i]);
         }
     }
+
+    public static boolean toString(String[] numbers) {
+        return false;
+    }
 }
